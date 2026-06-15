@@ -1,0 +1,57 @@
+name: "✨ Feature"
+description: "Entrega de valor maior — épico que agrupa Stories"
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature
+        Uma Feature representa uma entrega de valor completa para o usuário ou para o negócio. Ela é quebrada em Stories menores.
+
+  - type: input
+    id: objetivo
+    attributes:
+      label: "Objetivo de negócio"
+      description: "Qual problema ou oportunidade essa Feature endereça?"
+      placeholder: "Ex: Permitir que usuários resetem a senha de forma autônoma"
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: "Critérios de aceitação (DoD da Feature)"
+      description: "O que deve estar feito para considerar essa Feature entregue?"
+      placeholder: |
+        - [ ] Fluxo completo implementado no frontend
+        - [ ] API com testes de integração
+        - [ ] Deploy em produção validado
+    validations:
+      required: true
+
+  - type: textarea
+    id: stories
+    attributes:
+      label: "Stories relacionadas (Tracked by)"
+      description: "Liste as Stories que compõem esta Feature. Use sub-issues para rastrear."
+      placeholder: |
+        - [ ] #XX Story: ...
+        - [ ] #XX Story: ...
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Prioridade"
+      options:
+        - "🔴 Critical"
+        - "🟠 High"
+        - "🟡 Medium"
+        - "🟢 Low"
+    validations:
+      required: true
+
+  - type: input
+    id: milestone
+    attributes:
+      label: "Iteration / Milestone alvo"
+      placeholder: "Ex: Iteration 2"

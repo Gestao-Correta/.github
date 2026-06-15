@@ -1,0 +1,73 @@
+name: "📖 Story"
+description: "Unidade de trabalho dentro de uma Feature"
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## User Story
+        Descreva o trabalho do ponto de vista do usuário ou do sistema.
+
+  - type: input
+    id: feature_pai
+    attributes:
+      label: "Feature pai (Parent issue)"
+      description: "Número da Feature à qual esta Story pertence"
+      placeholder: "Ex: #42"
+    validations:
+      required: true
+
+  - type: textarea
+    id: como
+    attributes:
+      label: "Como [quem], quero [o quê], para [por quê]"
+      placeholder: |
+        Como usuário autenticado,
+        quero poder alterar minha senha,
+        para manter minha conta segura.
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: "Critérios de aceitação"
+      placeholder: |
+        - [ ] Validação de senha atual antes de alterar
+        - [ ] Email de confirmação enviado
+        - [ ] Erros exibidos com mensagem clara
+    validations:
+      required: true
+
+  - type: textarea
+    id: bloqueio
+    attributes:
+      label: "Bloqueios conhecidos (preencher se Status = Blocked)"
+      description: "Se essa Story está ou pode ficar bloqueada, descreva aqui o motivo e a dependência."
+      placeholder: |
+        Blocked by: #XX (aguardando endpoint de validação)
+        Responsável pelo desbloqueio: @fulano
+        Previsão: DD/MM
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Prioridade"
+      options:
+        - "🔴 Critical"
+        - "🟠 High"
+        - "🟡 Medium"
+        - "🟢 Low"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tipo_entrega
+    attributes:
+      label: "Área"
+      options:
+        - "Backend"
+        - "Frontend"
+        - "Full-stack"
+        - "Infra / DevOps"
+        - "QA"
