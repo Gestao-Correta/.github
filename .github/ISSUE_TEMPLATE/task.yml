@@ -1,0 +1,73 @@
+name: "⚙️ Task"
+description: "Tarefa técnica que não entrega valor direto ao usuário (infra, refactor, config)"
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Task
+        Use este tipo para trabalho técnico interno: configurações, refatorações, scripts, DevOps, débito técnico, etc.
+        Se a tarefa entrega valor direto ao usuário, considere criar uma **Story** em vez disso.
+
+  - type: input
+    id: story_pai
+    attributes:
+      label: "Story ou Feature pai (se aplicável)"
+      description: "Número da issue à qual esta Task pertence"
+      placeholder: "Ex: #42"
+
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: "O que precisa ser feito"
+      placeholder: "Descreva claramente a tarefa e o resultado esperado ao concluí-la."
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivacao
+    attributes:
+      label: "Por que é necessário"
+      placeholder: |
+        Ex: A query atual causa timeout em produção com mais de 10k registros.
+        Esta task refatora o índice para resolver o problema.
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: "Critérios de conclusão (DoD)"
+      placeholder: |
+        - [ ] Script executado e validado em staging
+        - [ ] PR revisado e aprovado
+        - [ ] Documentação atualizada (se aplicável)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Área"
+      options:
+        - "Backend"
+        - "Frontend"
+        - "Infra / DevOps"
+        - "Banco de dados"
+        - "QA / Testes"
+        - "Segurança"
+        - "Documentação"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Prioridade"
+      options:
+        - "🔴 Critical"
+        - "🟠 High"
+        - "🟡 Medium"
+        - "🟢 Low"
+    validations:
+      required: true

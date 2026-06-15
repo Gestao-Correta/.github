@@ -1,0 +1,68 @@
+---
+name: 🐛 Bug
+description: Relatar um comportamento incorreto ou inesperado
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: >
+        ## Bug Report
+
+        Descreva o problema com o máximo de detalhes para facilitar a reprodução e a correção.
+  - type: input
+    id: ambiente
+    attributes:
+      label: Ambiente
+      description: Onde o bug foi encontrado?
+      placeholder: "Ex: Produção / Staging / Local — Chrome 124 / iOS 17"
+    validations:
+      required: true
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição do problema
+      description: O que está acontecendo de errado?
+      placeholder: Ao clicar em X, o sistema faz Y mas deveria fazer Z.
+    validations:
+      required: true
+  - type: textarea
+    id: reproducao
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1. Acessar a tela de ...
+        2. Clicar em ...
+        3. Observar que ...
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Comportamento esperado
+      placeholder: O que deveria acontecer após os passos acima?
+    validations:
+      required: true
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências (logs, screenshots, vídeo)
+      description: Cole logs de erro, stack trace ou arraste imagens aqui.
+      placeholder: "TypeError: Cannot read properties of undefined"
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Severidade
+      description: Qual o impacto do bug no sistema ou no usuário?
+      options:
+        - 🔴 Critical — sistema indisponível ou perda de dados
+        - 🟠 High — funcionalidade principal quebrada
+        - 🟡 Medium — funcionalidade afetada mas com workaround
+        - 🟢 Low — problema cosmético ou de baixo impacto
+    validations:
+      required: true
+  - type: input
+    id: story_relacionada
+    attributes:
+      label: Story ou Feature relacionada (opcional)
+      placeholder: "Ex: #42"
