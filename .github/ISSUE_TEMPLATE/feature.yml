@@ -49,10 +49,3 @@ body:
         - "🟢 Low"
     validations:
       required: true
-
-  - type: input
-    id: milestone
-    attributes:
-      label: "Iteration / Milestone alvo"
-      placeholder: "Ex: Iteration 2"
-      

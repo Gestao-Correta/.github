@@ -25,16 +25,6 @@ body:
       required: true
 
   - type: textarea
-    id: motivacao
-    attributes:
-      label: "Por que é necessário"
-      placeholder: |
-        Ex: A query atual causa timeout em produção com mais de 10k registros.
-        Esta task refatora o índice para resolver o problema.
-    validations:
-      required: true
-
-  - type: textarea
     id: criterios
     attributes:
       label: "Critérios de conclusão (DoD)"
@@ -57,17 +47,5 @@ body:
         - "QA / Testes"
         - "Segurança"
         - "Documentação"
-    validations:
-      required: true
-
-  - type: dropdown
-    id: priority
-    attributes:
-      label: "Prioridade"
-      options:
-        - "🔴 Critical"
-        - "🟠 High"
-        - "🟡 Medium"
-        - "🟢 Low"
     validations:
       required: true
